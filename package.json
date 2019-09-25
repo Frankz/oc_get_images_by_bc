@@ -1,0 +1,7 @@
+{
+  "name": "oc_get_images_by_bc",
+  "version": "0.0.1",
+  "description": "Add a custom message here about your oc_get_images_by_bc",
+  "scripts": [ "oc_get_images_by_bc.sh" ],
+  "install": "make install"
+}
