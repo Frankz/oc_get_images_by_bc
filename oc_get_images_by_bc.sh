@@ -1,6 +1,9 @@
+#!/bin/bash
 function oc_get_images_by_bc () {
-  echo "# Test line to delete"
-  echo 
+  for i in $(oc get bc | grep -v NAME | grep -v JenkinsPipeline  | cut -d" " -f1);do
+    image=$(oc get bc $i -o json | jq .spec.strategy.sourceStrategy.from.name)
+    echo "$i: $image"
+  done
   
 }
 
